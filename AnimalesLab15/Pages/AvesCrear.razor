@@ -59,6 +59,8 @@
                 <th>Especie</th>
                 <th>Alimentacion</th>
                 <th>TdeVida</th>
+                <th>Volador</th>
+                <th>PeriodoIncub</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
@@ -71,6 +73,8 @@
                     <td>@ave.Especie</td>
                     <td>@ave.Alimentacion</td>
                     <td>@ave.TdeVida</td>
+                    <td>@ave.Volador</td>
+                    <td>@ave.PeriodoIncub</td>
                     <td>
                         <button class="btn btn-danger"
                                 @onclick="@(() => BorrarAves(ave.Volador))">

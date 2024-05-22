@@ -60,9 +60,6 @@
 
     protected async Task Guardar()
     {
-        aves.Add(ave);
-        ave = new Aves();
-
 
         await localStorage.SetItemAsync("aves", aves);
 
@@ -74,10 +71,7 @@
     {   //La primera vez que se corre poner en comentarios, pues como no existen datos
         //convierta la lista catedraticos en null
         aves = await localStorage.GetItemAsync<List<Aves>>("aves");
-        if (aves == null)
-        {
-            aves = new List<Aves>();
-        }
+        
         ave = aves.Find(c => c.Volador == volador);
     }
 
